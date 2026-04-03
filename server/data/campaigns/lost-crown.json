@@ -1,0 +1,223 @@
+{
+  "campaign": {
+    "id": "lost-crown",
+    "name": "The Lost Crown",
+    "setting": "Gritty low-magic medieval kingdom",
+    "tone": "dark fantasy, political intrigue",
+    "worldRules": "Magic is rare and mistrusted. The gods have been silent for a century. Power is held by those willing to get their hands dirty.",
+    "factions": [
+      {
+        "id": "iron-council",
+        "name": "The Iron Council",
+        "description": "Corrupt noble merchants who control Ironhaven's trade and politics"
+      },
+      {
+        "id": "shadow-hand",
+        "name": "The Shadow Hand",
+        "description": "A secretive thieves guild with eyes everywhere"
+      },
+      {
+        "id": "old-faith",
+        "name": "The Old Faith",
+        "description": "Dwindling priests of forgotten gods, desperate to reclaim relevance"
+      }
+    ],
+    "keyEvents": [],
+    "locations": [
+      {
+        "id": "city-ironhaven",
+        "name": "Ironhaven",
+        "type": "city",
+        "description": "A crumbling port city where old money and desperate poverty share the same fog-soaked streets.",
+        "atmosphere": "tense, foggy, morally grey",
+        "faction": "iron-council",
+        "locations": [
+          {
+            "id": "tavern-rusty-flagon",
+            "name": "The Rusty Flagon",
+            "type": "tavern",
+            "description": "The kind of place where no one asks your name and the ale is cheaper than the secrets.",
+            "atmosphere": "dim, smoky, rowdy but watchful",
+            "faction": null,
+            "npcs": [
+              {
+                "id": "mira-barkeep",
+                "name": "Mira Voss",
+                "role": "Barkeeper",
+                "age": 44,
+                "race": "Human",
+                "appearance": "Stocky, grey-streaked red hair pulled back tight, a scar running through her left eyebrow. Always wiping down the bar.",
+                "personality": "Blunt and no-nonsense with strangers. Fiercely loyal to regulars. Doesn't suffer fools.",
+                "trueNature": "Quietly feeds information to the Shadow Hand in exchange for protection of her establishment.",
+                "speechStyle": "Short sentences. Dry humor. Doesn't elaborate unless pressed.",
+                "motivations": "Keep the Flagon running. Keep her daughter safe.",
+                "fears": "The Iron Council deciding her tavern is a problem.",
+                "secret": "Her daughter is an initiate of the Old Faith — something that could get them both killed.",
+                "faction": "shadow-hand",
+                "questHooks": [
+                  "A regular hasn't shown up in three days and she's quietly worried",
+                  "She knows who was in the tavern the night a councilman was murdered"
+                ],
+                "steering": "Warm up slowly — starts guarded, opens up if players are respectful and spend coin. Shuts down immediately if threatened. Reacts with cold fury if her daughter is mentioned.",
+                "memory": {
+                  "player-default": {
+                    "relationship": "Mira and Josh are acquaintances, she is cautiously welcoming to him.",
+                    "keyFacts": [
+                      "Josh is a red-suited adventurer",
+                      "Mira warns him about the Iron Council",
+                      "The Shadow Hand may be a better ally for an adventurer seeking information"
+                    ],
+                    "lastSessionSummary": "Mira and Josh have a conversation in which Mira learns that Josh is a red-suited adventurer, she warns him of potential danger from the Iron Council, and suggests he might find help from the Shadow Hand."
+                  },
+                  "pip-thistlewick": {
+                    "relationship": "Player is a frequent patron of the tavern who got involved in something bigger than anticipated",
+                    "keyFacts": [
+                      "Player's name is Pip",
+                      "Player was involved in a mission that may have drawn the attention of the Iron Council"
+                    ],
+                    "lastSessionSummary": "Pip returned to the tavern, unknowingly carrying a note warning them about their actions. Mira warned Pip to stay out of trouble and avoid any bloodshed on her premises."
+                  }
+                },
+                "dmInstructions": [
+                  "Give Pip a note that says 'We know what you did'",
+                  "Tell him the message was left here by a tall redheaded woman",
+                  "Hand him the note, not tell it to him directly"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "market-ironhaven",
+            "name": "The Iron Market",
+            "type": "market district",
+            "description": "A sprawling outdoor market that smells of fish, smoke, and desperation.",
+            "atmosphere": "loud, crowded, chaotic",
+            "faction": "iron-council",
+            "npcs": [
+              {
+                "id": "pell-merchant",
+                "name": "Pell Dunwick",
+                "role": "Merchant / Fence",
+                "age": 55,
+                "race": "Human",
+                "appearance": "Fat, sweaty, rings on every finger. Wears clothes two sizes too fine for a market stall.",
+                "personality": "Aggressively cheerful. Everything is an opportunity.",
+                "trueNature": "Moves stolen goods for the Shadow Hand. Has dirt on half the council.",
+                "speechStyle": "Loud, salesman energy. Lots of 'my friend' and 'between you and me'.",
+                "motivations": "Money. More money. Safety through leverage.",
+                "fears": "Someone finding his ledger.",
+                "secret": "Has a hidden ledger documenting years of council bribes. His insurance policy.",
+                "faction": "shadow-hand",
+                "questHooks": [
+                  "Will pay well for a specific item he claims is 'just sentimental'",
+                  "Nervously asks if the players have seen anyone watching his stall"
+                ],
+                "steering": "Friendly until money or the ledger comes up. Folds quickly under real pressure but will rat on anyone to save himself.",
+                "memory": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "village-ashford",
+        "name": "Ashford",
+        "type": "village",
+        "description": "A quiet farming village three hours from Ironhaven, recently plagued by missing livestock and strange lights in the nearby woods.",
+        "atmosphere": "uneasy, rural, quietly frightened",
+        "faction": "old-faith",
+        "locations": [
+          {
+            "id": "ashford-shrine",
+            "name": "The Old Shrine",
+            "type": "religious site",
+            "description": "A crumbling stone shrine at the edge of the village. Half reclaimed by moss. Still tended by one old priest.",
+            "atmosphere": "solemn, faded, quietly hopeful",
+            "faction": "old-faith",
+            "npcs": [
+              {
+                "id": "brother-aldric",
+                "name": "Brother Aldric",
+                "role": "Priest of the Old Faith",
+                "age": 71,
+                "race": "Human",
+                "appearance": "Thin as winter, white beard, kind eyes that have seen too much. Moves slowly but deliberately.",
+                "personality": "Gentle, patient, deeply sad beneath the surface.",
+                "trueNature": "One of the last true believers. Has witnessed something in the woods that shook even his faith.",
+                "speechStyle": "Speaks in measured, careful sentences. Often pauses. Quotes old scripture.",
+                "motivations": "Protect the village. Understand what is happening in the woods. Restore some small piece of the old faith.",
+                "fears": "Dying before he understands what the gods want. That the gods want nothing at all.",
+                "secret": "Three weeks ago he saw something in the woods that he hasn't told anyone. It looked like a god.",
+                "faction": "old-faith",
+                "questHooks": [
+                  "Asks the players to investigate the lights in the woods — quietly, without alarming the village",
+                  "Offers a old map of the region in exchange for help"
+                ],
+                "steering": "Trusting by nature but not naive. Opens up quickly to players who show respect for the shrine or the old ways. Becomes evasive if pushed about what he saw in the woods — he needs to trust someone fully before sharing that.",
+                "memory": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "party": [
+      {
+        "id": "thorin-ironforge",
+        "name": "Thorin Ironforge",
+        "race": "Dwarf",
+        "class": "Fighter"
+      },
+      {
+        "id": "elara-swiftwind",
+        "name": "Elara Swiftwind",
+        "race": "Elf",
+        "class": "Ranger"
+      },
+      {
+        "id": "pip-thistlewick",
+        "name": "Pip Thistlewick",
+        "race": "Halfling",
+        "class": "Rogue"
+      }
+    ]
+  },
+  "_index": {
+    "npcs": {
+      "mira-barkeep": {
+        "locationId": "tavern-rusty-flagon",
+        "campaignId": "lost-crown"
+      },
+      "pell-merchant": {
+        "locationId": "market-ironhaven",
+        "campaignId": "lost-crown"
+      },
+      "brother-aldric": {
+        "locationId": "ashford-shrine",
+        "campaignId": "lost-crown"
+      }
+    },
+    "locations": {
+      "tavern-rusty-flagon": {
+        "parentId": "city-ironhaven",
+        "campaignId": "lost-crown"
+      },
+      "market-ironhaven": {
+        "parentId": "city-ironhaven",
+        "campaignId": "lost-crown"
+      },
+      "city-ironhaven": {
+        "parentId": null,
+        "campaignId": "lost-crown"
+      },
+      "ashford-shrine": {
+        "parentId": "village-ashford",
+        "campaignId": "lost-crown"
+      },
+      "village-ashford": {
+        "parentId": null,
+        "campaignId": "lost-crown"
+      }
+    }
+  }
+}
